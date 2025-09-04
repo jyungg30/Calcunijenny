@@ -1,19 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="#AAF0D1"
     tools:context=".MainActivity">
 
+
+    <EditText
+        android:id="@+id/inputFirstNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="#eee0eeee"
+        android:hint="Enter your first number"
+        android:inputType="numberDecimal"
+        android:padding="25dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/inputSecondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your second number"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="#eee0eeee"
+        android:padding="25dp"
+        android:layout_marginBottom="25dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="4">
+
+<Button
+        android:id="@+id/btnAddition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:padding="25dp"
+        android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:textColor="#FFFFFF"
+            android:padding="25dp"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="×"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:textColor="#FFFFFF"
+            android:padding="25dp"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="÷"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:textColor="#FFFFFF"
+            android:padding="25dp"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+
     <TextView
+        android:id="@+id/textResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Result will appear here"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#228B22"
+        android:layout_marginTop="30dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
